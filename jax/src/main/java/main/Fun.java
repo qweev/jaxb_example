@@ -7,6 +7,7 @@ import main.xmle.ItemObj;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,27 @@ public class Fun {
 
     public static void main(String[] args) throws JAXBException {
 
+        createXML();
+        readXML();
+
+
+    }
+
+    private static void readXML() throws JAXBException {
+
+        File file = new File("D:\\jb\\jaxb_example\\jax\\x.xml");
+        JAXBContext jaxbContext = JAXBContext.newInstance(Book.class);
+
+        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+        Book b = (Book) jaxbUnmarshaller.unmarshal(file);
+        System.out.println(b);
+
+        System.out.println("id2 == " + b.getIltemList().get(0).getId2());
+
+    }
+
+
+    private static void createXML() throws JAXBException {
         Book b1 = new Book();
         b1.setName("b11");
         b1.setId("aaa");
@@ -47,8 +69,9 @@ public class Fun {
 
         Marshaller m = c.createMarshaller();
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        System.out.println(f.getAbsolutePath());
         m.marshal(b1, f);
-
+        m.marshal(b1, System.out);
     }
 
 }

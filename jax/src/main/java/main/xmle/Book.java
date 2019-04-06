@@ -7,18 +7,52 @@ import javax.xml.bind.annotation.*;
 import java.util.List;
 
 
-@Setter
 @XmlRootElement
 public class Book {
 
 
-    @XmlElement
+
     private String name;
 
-    @XmlAttribute
+
     private String id;
 
-    @XmlElements(@XmlElement)
+
     private List<Item> iltemList;
 
+    public String getName() {
+        return name;
+    }
+
+    @XmlElement
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    @XmlAttribute
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public List<Item> getIltemList() {
+        return iltemList;
+    }
+
+    @XmlElements(@XmlElement)
+    public void setIltemList(List<Item> iltemList) {
+        this.iltemList = iltemList;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", id='" + id + '\'' +
+                ", iltemList=" + iltemList +
+                '}';
+    }
 }

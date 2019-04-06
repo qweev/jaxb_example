@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <book id="aaa">
-    <name>b11</name>
     <iltemList id="2" id2="3">
-        <itemVal>iname1</itemVal>
         <itemObj itemObjectAttr="5">ioVal</itemObj>
+        <itemVal>iname1</itemVal>
     </iltemList>
     <iltemList id="4" id2="5">
         <itemVal>iname2</itemVal>
     </iltemList>
+    <name>b11</name>
 </book>
