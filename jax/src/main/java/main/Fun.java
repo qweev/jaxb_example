@@ -24,7 +24,7 @@ public class Fun {
 
     private static void readXML() throws JAXBException {
 
-        File file = new File("D:\\jb\\jaxb_example\\jax\\x.xml");
+        File file = new File("C:\\jaxb\\jaxb_example\\jax\\x.xml");
         JAXBContext jaxbContext = JAXBContext.newInstance(Book.class);
 
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();

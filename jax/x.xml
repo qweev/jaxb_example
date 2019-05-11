@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<book id="aaa">
+<book xmlns:ns2="http://www.example.com/FOO" id="aaa">
     <iltemList id="2" id2="3">
         <itemObj itemObjectAttr="5">ioVal</itemObj>
         <itemVal>iname1</itemVal>
@@ -7,5 +7,5 @@
     <iltemList id="4" id2="5">
         <itemVal>iname2</itemVal>
     </iltemList>
-    <name>b11</name>
+    <ns2:name>b11</ns2:name>
 </book>

@@ -24,7 +24,7 @@ public class Book {
         return name;
     }
 
-    @XmlElement
+    @XmlElement(namespace="http://www.example.com/FOO")
     public void setName(String name) {
         this.name = name;
     }
